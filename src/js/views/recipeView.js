@@ -1,7 +1,8 @@
 import View from './View.js';
 
 import icons from 'url:../../img/icons.svg';
-import { Fraction } from 'fractional'; // from npm so don't need any path
+// import { Fraction } from 'fractional'; // from npm so don't need any path
+const Fraction = require('fractional').Fraction;
 
 class RecipeView extends View {
   // Uses classes makes everything a bit more simple
