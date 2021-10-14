@@ -15,7 +15,6 @@ export default class View {
   render(data, render = true) {
     console.log('In render with data:', data);
     if (!data || (Array.isArray(data) && data.length === 0)) {
-      console.log('Returning error');
       return this.renderError();
     }
 
@@ -88,6 +87,7 @@ export default class View {
   }
 
   renderMessage(message = this._message) {
+    console.log('Rendering message', message);
     const markup = `
           <div class="message">
             <div>
@@ -99,6 +99,7 @@ export default class View {
           </div>
     `;
     this._clear();
+    console.log('markup', markup);
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 }
